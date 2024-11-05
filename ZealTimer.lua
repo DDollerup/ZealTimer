@@ -21,12 +21,12 @@ end)
 
 -- Add background with padding and transparency
 zealTimerFrame:SetBackdrop({
-    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background", -- Background texture
-    edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border", -- Border texture
+    bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+    edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
     tile = true,
     tileSize = 16,
     edgeSize = 16,
-    insets = { left = 15, right = 15, top = 15, bottom = 15 } -- Padding around the text
+    insets = { left = 4, right = 4, top = 4, bottom = 4 }
 })
 zealTimerFrame:SetBackdropColor(0, 0, 0, 0.7) -- Black with 70% transparency
 
@@ -45,6 +45,23 @@ zealTimerFrame.text:SetText("N/A")
 zealTimerFrame.rankText = zealTimerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 zealTimerFrame.rankText:SetPoint("TOP", zealTimerFrame.text, "BOTTOM", 0, -5)
 zealTimerFrame.rankText:SetText("(N/A)")
+
+-- Enable dragging with CTRL + Left-Click
+zealTimerFrame:SetMovable(true)
+zealTimerFrame:EnableMouse(true)
+zealTimerFrame:RegisterForDrag("LeftButton")
+
+zealTimerFrame:SetScript("OnMouseDown", function()
+    if arg1 == "LeftButton" and IsControlKeyDown() then
+        this:StartMoving()
+    end
+end)
+
+zealTimerFrame:SetScript("OnMouseUp", function()
+    if arg1 == "LeftButton" then
+        this:StopMovingOrSizing()
+    end
+end)
 
 -- Known texture path for the Zeal buff icon
 local zealTexture = "Interface\\Icons\\INV_Jewelry_Talisman_01"
@@ -117,5 +134,8 @@ zealTimerFrame:SetScript("OnEvent", function()
         end 
     end
 end)
+
+
+
 
 print("ZealTimer by Dollerp - Loaded")
