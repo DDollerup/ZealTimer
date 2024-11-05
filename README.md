@@ -26,7 +26,7 @@ Simply keep an eye on the ZealTimer frame to monitor your buff status and maximi
 
 ## Installation
 1. Download the addon files.
-2. Place them in your `World of Warcraft/_retail_/Interface/AddOns` folder.
+2. Place them in your `World of Warcraft/Interface/AddOns` folder.
 3. Restart World of Warcraft.
 
 Happy buff tracking with **ZealTimer**!
