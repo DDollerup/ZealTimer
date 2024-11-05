@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: Zeal Timer for TWOW Paladin Crusader Strike Ability
+## Notes: Shows buff duration next to character.
+## Author: d0llerp
+## Version: 1.0
+
+ZealTimer.lua
