@@ -1,3 +1,9 @@
+function print(msg)
+    if DEFAULT_CHAT_FRAME then
+        DEFAULT_CHAT_FRAME:AddMessage("|cff00ff00[ZealTimer by Dollerp]:|r " .. tostring(msg))
+    end
+end
+
 -- Create a frame to handle events
 local zealTimerFrame = CreateFrame("Frame", "zealTimerFrame", UIParent)
 zealTimerFrame:RegisterEvent("UNIT_AURA")
@@ -138,4 +144,4 @@ zealTimerFrame:SetScript("OnEvent", function()
     end
 end)
 
-print("ZealTimer by Dollerp - Loaded")
+print("Loaded")
