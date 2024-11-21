@@ -63,7 +63,7 @@ zealTimerFrame.icon = zealTimerFrame:CreateTexture(nil, "ARTWORK")
 zealTimerFrame.icon:SetWidth(_width - 10)
 zealTimerFrame.icon:SetHeight(_width - 10)
 zealTimerFrame.icon:SetPoint("TOP", zealTimerFrame, "TOP", 0, -5) -- Position it at the top
-zealTimerFrame.icon:SetTexture("Interface\\Icons\\INV_Jewelry_Talisman_01") -- Path to Zeal buff icon
+zealTimerFrame.icon:SetTexture("Interface\\Icons\\Spell_Holy_InnerFire") -- Path to Zeal buff icon
 
 -- Create a font string to display the "Zeal:" label
 -- zealTimerFrame.labelText = zealTimerFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -81,7 +81,7 @@ zealTimerFrame.rankText:SetPoint("TOP", zealTimerFrame.text, "BOTTOM", 0, -5)
 zealTimerFrame.rankText:SetText("(N/A)")
 
 -- Known texture path for the Zeal buff icon
-local zealTexture = "Interface\\Icons\\INV_Jewelry_Talisman_01"
+local zealTexture = "Interface\\Icons\\Spell_Holy_InnerFire"
 -- Variables to track Zeal buff
 local zealStartTime = 0
 local zealStacks = 0
